@@ -20,6 +20,6 @@ jobs:
         key: ${{ secrets.SERVER_PRIVATE_KEY }}
         port: 22
         script: |
-          cd projects/nestjs-github-ci
+          cd nestjs-github-ci
           git pull
           git status

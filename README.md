@@ -14,3 +14,10 @@
 
 - Push/Merges with master cause a build with for prod env
 - Push/Merges with staging cause a build for dev env
+
+## Steps to configure GitHub CI for your server
+
+0. Issue this command in your (linux) OS: `ssh-keygen -m PEM -t rsa -b 4096 -C "some-name"`
+1. Copy the content of generated private key in clipboard
+2. Go to your repository GitHub setting page. Under the **secret** section add a secret for **actions** and paste the copied value from prev step. If you are confused it should be somewhere like this: https://github.com/kasir-barati/nestjs-github-ci/settings/secrets/actions/new
+3. Add the generated public key in the server `authorized_keys`
