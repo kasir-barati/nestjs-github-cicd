@@ -15,7 +15,7 @@ jobs:
     - name: Build the Docker image
       uses: appleboy/ssh-action@master
       with: 
-        host: flyver.ir
+        host: ${{ secrets.SERVER_IP }}
         username: kasir-barati
         key: ${{ secrets.SERVER_PRIVATE_KEY }}
         port: 22
