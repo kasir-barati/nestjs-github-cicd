@@ -1,0 +1,25 @@
+name: Docker Image CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build the Docker image
+      uses: appleboy/ssh-action@master
+      with: 
+        host: flyver.ir
+        username: kasir-barati
+        key: ${{ secrets.SERVER_PRIVATE_KEY }}
+        port: 22
+        script: |
+          cd projects/nestjs-github-ci
+          git pull
+          git status
