@@ -1,7 +1,6 @@
-name: Docker Image CI
+name: Docker Image for prod env
 
-on:
-  workflow_dispatch:
+on: 
   push:
     branches: [ main ]
   pull_request:
@@ -20,6 +19,6 @@ jobs:
         key: ${{ secrets.SERVER_PRIVATE_KEY }}
         port: ${{ secrets.SERVER_SSH_PORT }}
         script: |
-          cd nestjs-github-ci
+          cd nestjs-github-cicd
           git pull
           git status

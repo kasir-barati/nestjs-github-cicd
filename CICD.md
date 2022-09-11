@@ -16,6 +16,11 @@
 
       Most software teams start with continuous delivery and integrate more automated testing over time.
 
+# WHY?
+
+- In the contemporary volatile and highly competitive business environment, the systems created to support, and drive operations are crucial.
+- Deliver custom, quality applications in a timely fashion.
+
 # CI
 
 - Package up files and components into release artifacts automatically
@@ -34,6 +39,13 @@
 5. These two thing in parallel:
    1. Deploy into the staging server
    2. E2E tests
+
+# Write a pipeline in GitHub Action
+
+- Make sure all of your changes work with the rest of the code
+- It should also compile your code
+- Run tests
+- Check that it’s functional.
 
 # References:
 
