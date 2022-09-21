@@ -22,4 +22,4 @@ jobs:
         script: |
           cd nestjs-github-cicd
           git pull
-          git status
+          docker build 
